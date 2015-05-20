@@ -1,0 +1,18 @@
+* {
+	margin: 0;
+	padding: 0;
+
+}
+html, body {
+	height: 100%;
+}
+
+#clock {
+	/*color: white;*/
+	height: 64px;
+	font: 64px/64px Lato;
+	font-weight: lighter;
+	position: relative;
+	top: 50%;
+	text-align: center;
+}
