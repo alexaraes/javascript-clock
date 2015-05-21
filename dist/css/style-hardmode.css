@@ -1,0 +1,29 @@
+* {
+	margin: 0;
+	padding: 0;
+
+}
+html, body {
+	height: 100%;
+	color: white;
+}
+
+#day {
+	height: 94px;
+	font: 94px/94px Lato;
+	font-weight: lighter;
+	position: relative;
+	top: 30%;
+	text-align: center;
+	margin-bottom: 75px;
+}
+
+#clock {
+	
+	height: 74px;
+	font: 74px/74px Lato;
+	font-weight: lighter;
+	position: relative;
+	top: 30%;
+	text-align: center;
+}

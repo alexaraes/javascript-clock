@@ -8,17 +8,6 @@ var bgColor = setInterval(function displayColor() {
 	document.body.style.background = color;
 }, 50)
 
-// var textColor = setInterval(function wordsColor() {
-// 	var nowText = new Date();
-// 	var dayText = nowText.getDay();
-// 	var monthText = nowText.getMonth();
-// 	var dayNumText = nowText.getDate();
-
-// 	var lettercolor = 'rgb' + '(' + dayText + ', ' + monthText + ', ' + dayNumText + ')';
-// 	document.getElementById('day').style.color = lettercolor;
-// 	document.getElementById('clock').style.color = lettercolor;
-// }, 50)
-
 var dayDate = document.getElementById('day');
 
 var updateDay = setInterval(function() {
@@ -81,11 +70,12 @@ var updateClock = setInterval(function() {
 	var minutes = now.getMinutes();
 	var seconds = now.getSeconds();
 
-//change to hours > 12, uncomment hours = hours - '12'; for 12 hour clock
-	if(hours < 12) {
-		// hours = hours - '12';
+//comment out for 24 hour clock
+	if(hours > 12) {
+		hours = hours - '12';
 		hours = '0' + hours;
 	}
+//comment out for 24 hour clock
 	
 	if(minutes <= 9) {
 		minutes = '0'+minutes;
@@ -95,9 +85,7 @@ var updateClock = setInterval(function() {
 	}
 	colorClock.innerHTML = hours + ':' + minutes + ':' + seconds;
 
-	var color = "#"+ 0 + parseInt(hours) + parseInt(minutes) + parseInt(seconds);
+	var color = "#"+parseInt(hours) + parseInt(minutes) + parseInt(seconds);
 	document.body.style.background = color;
 
 }, 500);
-
-
