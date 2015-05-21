@@ -82,11 +82,10 @@ var updateClock = setInterval(function() {
 	var seconds = now.getSeconds();
 
 //change to hours > 12, uncomment hours = hours - '12'; for 12 hour clock
-	if(hours < 12) {
+	if(hours < 10) {
 		// hours = hours - '12';
 		hours = '0' + hours;
 	}
-	
 	if(minutes <= 9) {
 		minutes = '0'+minutes;
 	}
@@ -95,7 +94,7 @@ var updateClock = setInterval(function() {
 	}
 	colorClock.innerHTML = hours + ':' + minutes + ':' + seconds;
 
-	var color = "#"+ 0 + parseInt(hours) + parseInt(minutes) + parseInt(seconds);
+	var color = "#"+ parseInt(hours) + parseInt(minutes) + parseInt(seconds);
 	document.body.style.background = color;
 
 }, 500);
